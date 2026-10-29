@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAISIKA MEC SKILL SCHOOL admission form and local application manager.">
+  <title>SAISIKA MEC SKILL SCHOOL | Admission</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark" aria-hidden="true">SM</div>
+    <div class="brand-copy">
+      <p class="eyebrow">WELCOME TO</p>
+      <h1>SAISIKA MEC SKILL SCHOOL</h1>
+      <p class="subtitle">Admission and Applicant Records</p>
+    </div>
+  </header>
+
+  <nav class="top-nav" aria-label="Main navigation">
+    <button type="button" class="nav-button active" data-view="admissionView">Admission Form</button>
+    <button type="button" class="nav-button" data-view="adminView">Admin Portal</button>
+  </nav>
+
+  <main class="page-wrap">
+    <section id="admissionView" class="view">
+      <div class="intro">
+        <span class="pill">ADMISSIONS</span>
+        <h2>Admission Application Form</h2>
+        <p>Complete the fields below. Please check your information before submitting.</p>
+      </div>
+
+      <form id="admissionForm" class="form-card">
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div><h3>Course information</h3><p>Tell us which course you want to study.</p></div>
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="course">Course applied for <span>*</span></label>
+            <input id="course" name="Course Applied For" required maxlength="100" placeholder="Enter course name">
+          </div>
+          <div class="field">
+            <label for="formDate">Application date</label>
+            <input id="formDate" name="Application Date" type="date">
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <div><h3>Applicant information</h3><p>Enter your personal details.</p></div>
+        </div>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="fullname">Full name <span>*</span></label>
+            <input id="fullname" name="Full Name" required maxlength="120" autocomplete="name" placeholder="Surname, first name and other names">
+          </div>
+          <div class="field">
+            <label for="sex">Sex</label>
+            <select id="sex" name="Sex">
+              <option value="">Select</option><option>Male</option><option>Female</option><option>Prefer not to say</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="age">Age</label>
+            <input id="age" name="Age" type="number" min="1" max="120" inputmode="numeric">
+          </div>
+          <div class="field">
+            <label for="phone">Telephone number</label>
+            <input id="phone" name="Telephone Number" type="tel" autocomplete="tel" maxlength="30" placeholder="e.g. 08012345678">
+          </div>
+          <div class="field">
+            <label for="nationality">Nationality</label>
+            <input id="nationality" name="Nationality" value="Nigerian" maxlength="80">
+          </div>
+          <div class="field">
+            <label for="state">State of origin</label>
+            <input id="state" name="State of Origin" maxlength="80">
+          </div>
+          <div class="field">
+            <label for="town">Home town</label>
+            <input id="town" name="Home Town" maxlength="100">
+          </div>
+          <div class="field full">
+            <label for="address">Residential address</label>
+            <textarea id="address" name="Residential Address" rows="2" maxlength="300"></textarea>
+          </div>
+          <div class="field full">
+            <label for="postal">Postal address (if different)</label>
+            <textarea id="postal" name="Postal Address" rows="2" maxlength="300"></textarea>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <div><h3>Parent or guardian</h3><p>Provide contact details where available.</p></div>
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="parent">Parent's name</label>
+            <input id="parent" name="Parent's Name" maxlength="120">
+          </div>
+          <div class="field">
+            <label for="parentphone">Parent's phone number</label>
+            <input id="parentphone" name="Parent's Phone Number" type="tel" maxlength="30">
+          </div>
+          <div class="field full">
+            <label for="parentaddress">Parent's address</label>
+            <textarea id="parentaddress" name="Parent's Address" rows="2" maxlength="300"></textarea>
+          </div>
+          <div class="field">
+            <label for="parentemail">Parent's email address</label>
+            <input id="parentemail" name="Parent's Email Address" type="email" maxlength="150">
+          </div>
+          <div class="field">
+            <label for="guardian">Guardian's name</label>
+            <input id="guardian" name="Guardian's Name" maxlength="120">
+          </div>
+          <div class="field">
+            <label for="guardianphone">Guardian's phone number</label>
+            <input id="guardianphone" name="Guardian's Phone Number" type="tel" maxlength="30">
+          </div>
+          <div class="field">
+            <label for="guardianemail">Guardian's email address</label>
+            <input id="guardianemail" name="Guardian's Email Address" type="email" maxlength="150">
+          </div>
+          <div class="field full">
+            <label for="guardianaddress">Guardian's address</label>
+            <textarea id="guardianaddress" name="Guardian's Address" rows="2" maxlength="300"></textarea>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <span class="section-number">04</span>
+          <div><h3>Declaration</h3><p>Confirm the information you have provided.</p></div>
+        </div>
+        <p class="declaration">I declare that the information supplied on this form is true and correct to the best of my knowledge.</p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="signature">Applicant's signature (type full name)</label>
+            <input id="signature" name="Applicant's Signature" maxlength="120">
+          </div>
+          <div class="field">
+            <label for="signdate">Signature date</label>
+            <input id="signdate" name="Signature Date" type="date">
+          </div>
+        </div>
+        <label class="check-row"><input id="confirmAccuracy" type="checkbox" required> <span>I confirm that the information above is accurate.</span></label>
+        <div class="form-actions">
+          <button class="button primary" type="submit">Submit application</button>
+          <button class="button secondary" type="reset">Clear form</button>
+          <button class="button ghost" type="button" id="printBlankButton">Print blank form</button>
+        </div>
+        <p class="privacy-note">Demo storage notice: this version saves applications in this browser on this device only. It does not send data to the school or to an online server.</p>
+      </form>
+    </section>
+
+    <section id="adminView" class="view" hidden>
+      <div class="intro">
+        <span class="pill">STAFF AREA</span>
+        <h2>Admin Portal</h2>
+        <p>Review saved applications, open a printable record, or export records for backup.</p>
+      </div>
+
+      <div id="loginPanel" class="form-card login-card">
+        <h3>Administrator sign in</h3>
+        <p class="muted">Enter the demo password to open locally saved records.</p>
+        <form id="loginForm">
+          <div class="field">
+            <label for="adminPassword">Admin password</label>
+            <input id="adminPassword" type="password" required autocomplete="current-password" placeholder="Enter password">
+          </div>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Sign in</button>
+          </div>
+          <p id="loginMessage" class="message" role="status"></p>
+        </form>
+      </div>
+
+      <div id="dashboardPanel" hidden>
+        <div class="dashboard-top">
+          <div><h3>Application records</h3><p id="applicationCount" class="muted">0 applications</p></div>
+          <div class="toolbar">
+            <button class="button secondary" id="exportButton" type="button">Export JSON</button>
+            <button class="button danger-outline" id="deleteAllButton" type="button">Delete all</button>
+            <button class="button ghost" id="logoutButton" type="button">Log out</button>
+          </div>
+        </div>
+        <div class="search-row">
+          <input id="searchApplications" type="search" placeholder="Search by name, course or phone..." aria-label="Search applications">
+        </div>
+        <div id="applicationsList" class="application-list"></div>
+        <p id="emptyMessage" class="empty-state" hidden>No applications found. Submit an application first, or try a different search.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>SAISIKA MEC SKILL SCHOOL · Admission Records</p>
+    <p class="small">Local demonstration project — use a secure server and database before collecting real applicant information.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
